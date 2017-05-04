@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+            background-image:url("pexels-photo.jpg");
+         }
+      h1{
+         color:cornflowerblue
+         }
+  </style>
+</head>
+<body>
+     <center><h1>FOOD WORLD</h1></center>
+	 
+      <form action="#">
+
+     	<h2><b>Todays's Special</b></h2>
+        <fieldset style="font-family:verdana;font-size:180%;">
+	<legend>Check the Side dishes you wish to enjoy :</legend><h6>
+	1.Briyani 2.Naan 3.chettinadu special cury 4.spicy veg cury<br></h6>
+	<input type="checkbox" id="x" name="a" value="Briyani" onclick="alert_on_checked(this.id)"unchecked> 1<br>
+        <input type="checkbox" id="y" name="b" value="Naan" onclick="alert_on_checked(this.id)" unchecked> 2<br>
+	<input type="checkbox" id="z" name="b" value="chettinadu special cury" onclick="alert_on_checked(this.id) " unchecked> 3<br>
+	<input type="checkbox"  id= "r" name="b" value="spicy veg cury" onclick="alert_on_checked(this.id) " unchecked> 4<br>
+            
+	<button  type="submit"  >order</button></fieldset>
+     </form>
+   <ul id="c">
+   Your order:</ul>
+
+<script>
+ function alert_on_checked(elementId) {
+  var checkbox = document.getElementById(elementId);
+  if(checkbox.checked) {
+    var t=checkbox.value
+    add(t)
+  }
+}
+
+ function add(val)
+{
+var l=document.getElementById("c")
+var h=document.createElement('li')
+h.appendChild(document.createTextNode(val))
+l.appendChild(h)
+}
+</script>
+</body> 
+</html>
